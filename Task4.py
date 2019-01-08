@@ -7,13 +7,13 @@ rss_channel = 'https://habr.com/rss/best/daily/'
 filename = 'text.html'
 data = feedparser.parse(rss_channel)
 
-addr_from = "example.task4@gmail.com"
-addr_to = 'romchick02@gmail.com'
-password = 'qwerty_12345'
+addr_from = "От кого"
+addr_to = 'Кому'
+password = 'пароль'
 
 msg = MIMEMultipart()
 msg['From'] = addr_from
-msg['To'] = 'romchick02@gmail.com'
+msg['To'] = addr_to
 msg['Subject'] = 'Лучшее на habr.com за 24 часа'
 
 with open(filename, "w", encoding='utf-8') as fp:
